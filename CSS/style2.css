@@ -1,0 +1,285 @@
+@import url('http://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --blue:#040454;
+    --orange:#bc540a;
+    --light-color:#111;
+    --box-shadow:.5rem .5rem 0 rgba(22, 160, 133, .2);
+    --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+    --border: .2rem solid var(--blue);
+    --images: url('image/medical.jpg') no-repeat;
+}
+
+*{
+    font-family: 'Poppons', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-out;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('blog-4.jpg') no-repeat;
+    background: #fff;
+    gap: 10rem;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+.header{
+    padding: 2rem;
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0 ,0 ,.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--blue);
+}
+
+.header .logo{
+    float: left;
+    padding-left: 20px;
+    font-size: 2.5rem;
+    color: var(--orange);
+}
+
+.header .logo i{
+
+    color: #c0392b;
+}
+
+.header .navber a{
+    font-size: 1.7rem;
+    color: white;
+    margin-left: 2rem;
+}
+
+.header .navber a:hover{
+    color: red;
+}
+
+.header .navber .btnLogin-popup{
+    width: 130px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.header .navber .btnLogin-popup:hover{
+    background: #fff;
+    color: var(--blue);
+}
+
+.wrapper.login{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0 ,0 ,.5);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrapper.register{
+    position: relative;
+    width: 400px;
+    height: 520px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0 ,0 ,.5);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+
+.form-box h2{
+    font-size: 3rem;
+    color: var(--orange);
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: var(--border);
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.3rem;
+    color: var(--light-color);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    color: var(--light-color);
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.3rem;
+    color: var(--light-color);
+    line-height: 57px;
+}
+
+.remember-forget{
+    font-size: 1.1rem;
+    color: var(--light-color);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forget label input{
+    accent-color: var(--light-color);
+    margin-right: 3px;
+}
+
+.remember-forget a{
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.remember-forget a:hover{
+    text-decoration: underline;
+}
+
+.btn-login{
+    width: 100%;
+    height: 3rem;
+    background: var(--blue);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.btn-register{
+    width: 100%;
+    height: 3rem;
+    background: var(--blue);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.login-register{
+    font-size: 1.1rem;
+    color: var(--light-color);
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+.form-box span .error-msg{
+    margin: 10px 0;
+    background: var(--orange);
+    color: #fff;
+    display: block;
+    font-size: 1.4rem;
+
+
+}
+
+.appointmentno .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.display-6.text-center h2{
+    color: var(--orange);
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.box{
+    width: 100%;
+    margin: .7rem 0;
+    border-radius: .5rem;
+    border: var(--border);
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    padding: 1rem;
+}
+
+.appointmentno .row form .btn{
+    padding: 1rem 4rem;
+}
